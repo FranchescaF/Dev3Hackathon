@@ -20,7 +20,6 @@ import {
 } from 'lucide-react';
 
 export default function LandingPage() {
-  // Función para scroll suave que considera la altura del nav fijo
   const scrollToSection = (id: string) => {
     const element = document.getElementById(id);
     if (element) {
@@ -39,9 +38,7 @@ export default function LandingPage() {
 
   return (
     <div className="min-h-screen bg-white text-slate-800 font-sans selection:bg-cyan-100">
-      
-      {/* NAVEGACIÓN SIEMPRE VISIBLE (FIXED) */}
-      <nav className="fixed top-0 left-0 right-0 z-[100] bg-white/80 backdrop-blur-md border-b border-cyan-100/50 shadow-sm">
+            <nav className="fixed top-0 left-0 right-0 z-[100] bg-white/80 backdrop-blur-md border-b border-cyan-100/50 shadow-sm">
         <div className="flex items-center justify-between px-8 py-4 max-w-7xl mx-auto">
           <div className="flex items-center gap-2 cursor-pointer" onClick={() => window.scrollTo({top: 0, behavior: 'smooth'})}>
             <div className="bg-[#008BB7] p-2 rounded-xl shadow-inner">
@@ -64,8 +61,6 @@ export default function LandingPage() {
           </button>
         </div>
       </nav>
-
-      {/* Contenido Principal con padding superior para el Nav */}
       <div className="pt-20">
         <div className="bg-[#F0F9FA] pb-32"> 
           <header className="max-w-7xl mx-auto px-8 pt-8 pb-24 grid lg:grid-cols-2 gap-16 items-start">        
@@ -178,8 +173,6 @@ export default function LandingPage() {
             </button>
           </div>
         </section>
-
-        {/* FOOTER RE-AGREGADO Y COMPLETO */}
         <footer className="bg-[#F0F9FA]/80 border-t border-slate-100 pt-16 pb-8">
           <div className="max-w-7xl mx-auto px-8 grid md:grid-cols-4 gap-12 mb-16">
             <div className="space-y-4">
@@ -223,8 +216,6 @@ export default function LandingPage() {
     </div>
   );
 }
-
-// COMPONENTES AUXILIARES
 function FeatureCard({ icon: Icon, bgColor, iconColor, title, desc }: any) {
   return (
     <div className="bg-white p-8 rounded-3xl border border-slate-100 shadow-sm hover:shadow-md transition-shadow">
