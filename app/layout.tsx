@@ -3,8 +3,7 @@ import { Geist, Geist_Mono } from "next/font/google";
 import '@solana/wallet-adapter-react-ui/styles.css';
 import "./globals.css";
 
-// 1. Importamos el proveedor que creaste en el paso anterior
-import AppWalletProvider from "./components/WalletProvider"; 
+import { AppWalletProvider } from "./components/WalletProvider";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
