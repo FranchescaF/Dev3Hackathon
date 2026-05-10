@@ -18,8 +18,10 @@ import {
   Zap,
   HeartHandshake
 } from 'lucide-react';
+import { useRouter } from 'next/navigation';
 
 export default function LandingPage() {
+  const router = useRouter();
   const scrollToSection = (id: string) => {
     const element = document.getElementById(id);
     if (element) {
@@ -38,7 +40,7 @@ export default function LandingPage() {
 
   return (
     <div className="min-h-screen bg-white text-slate-800 font-sans selection:bg-cyan-100">
-            <nav className="fixed top-0 left-0 right-0 z-[100] bg-white/80 backdrop-blur-md border-b border-cyan-100/50 shadow-sm">
+            <nav className="fixed top-0 left-0 right-0 z-100 bg-white/80 backdrop-blur-md border-b border-cyan-100/50 shadow-sm">
         <div className="flex items-center justify-between px-8 py-4 max-w-7xl mx-auto">
           <div className="flex items-center gap-2 cursor-pointer" onClick={() => window.scrollTo({top: 0, behavior: 'smooth'})}>
             <div className="bg-[#008BB7] p-2 rounded-xl shadow-inner">
@@ -82,8 +84,8 @@ export default function LandingPage() {
                 VozMayor convierte trámites previsionales complejos en conversaciones simples y seguras para adultos mayores.
               </p>
               <div className="-mt-4 flex flex-wrap gap-6">
-                <button className="bg-[#008BB7] text-white px-8 py-4 rounded-2xl font-bold flex items-center gap-2 shadow-lg shadow-cyan-200 hover:scale-105 transition-transform">
-                  <Mic className="w-5 h-5" /> Hablar ahora
+                <button onClick={() => router.push("/dashboard-contigo")} className="bg-[#008BB7] text-white px-8 py-4 rounded-2xl font-bold flex items-center gap-2 shadow-lg shadow-cyan-200 hover:scale-105 transition-transform">
+                  <Mic className="w-5 h-5"/> Hablar ahora
                 </button>
                 <button className="bg-white text-slate-700 px-8 py-4 rounded-2xl font-bold border border-slate-200 hover:bg-slate-50 transition-colors">
                   Ver demo
@@ -105,12 +107,12 @@ export default function LandingPage() {
               </div>
             </div>
             <div className="relative">
-              <div className="bg-white rounded-[2rem] p-4 shadow-2xl relative">
-                <div className="aspect-square bg-gradient-to-b from-cyan-50 to-white rounded-[2.5rem] flex items-end justify-center overflow-hidden">
+              <div className="bg-white rounded-4xl p-4 shadow-2xl relative">
+                <div className="aspect-square bg-linear-to-b from-cyan-50 to-white rounded-[2.5rem] flex items-end justify-center overflow-hidden">
                   <img 
                     src="https://media.istockphoto.com/id/1463964143/es/foto/el-abuelo-y-la-abuela-ancianos-pasan-tiempo-divirti%C3%A9ndose-usando-aplicaciones-de-tel%C3%A9fonos.jpg?s=170667a&w=0&k=20&c=1rTMNVVlYnDvVrANcUcAQMMVx1-XBFjNX68hJGhEQlY=" 
                     alt="Adulto mayor" 
-                    className="w-full h-full object-cover rounded-[2rem]" 
+                    className="w-full h-full object-cover rounded-4xl" 
                   />
                 </div>
               </div>
@@ -168,8 +170,8 @@ export default function LandingPage() {
           <div className="bg-[#008BB7] rounded-[3rem] p-16 text-center text-white shadow-2xl shadow-cyan-200/50">
             <h2 className="text-4xl md:text-5xl font-serif font-bold mb-6">Empieza a hablar con VozMayor</h2>
             <p className="text-cyan-50 text-xl mb-10 opacity-90">Sin descargas. Sin formularios largos. Solo tu voz.</p>
-            <button className="bg-white text-[#008BB7] px-10 py-4 rounded-2xl font-bold text-lg flex items-center gap-3 mx-auto hover:scale-105 transition-transform shadow-lg">
-              <Mic className="w-6 h-6" /> Hablar ahora
+            <button onClick={() => router.push("/dashboard-contigo")} className="bg-white text-[#008BB7] px-10 py-4 rounded-2xl font-bold text-lg flex items-center gap-3 mx-auto hover:scale-105 transition-transform shadow-lg">
+              <Mic className="w-6 h-6"/> Hablar ahora
             </button>
           </div>
         </section>
@@ -242,7 +244,7 @@ function ProblemCard({ icon, title, desc }: any) {
 
 function StepCard({ number, icon, title, desc }: any) {
   return (
-    <div className="relative p-8 bg-white border border-slate-100 rounded-[2rem] shadow-sm hover:shadow-md transition-shadow overflow-hidden">
+    <div className="relative p-8 bg-white border border-slate-100 rounded-4xl shadow-sm hover:shadow-md transition-shadow overflow-hidden">
       <span className="absolute -top-2 -left-1 text-[8rem] font-serif font-bold text-cyan-50/50 leading-none select-none pointer-events-none">{number}</span>
       <div className="relative z-10 space-y-4">
         <div className="text-[#008BB7]">{icon}</div>
