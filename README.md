@@ -1,94 +1,36 @@
-# VozMayor: Tu Asesor AFP Seguro
+This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
-> “La tecnología no debería ser una barrera para la independencia de los adultos mayores.”
+## Getting Started
 
-## 📌 Descripción del Proyecto
+First, run the development server:
 
-**VozMayor** es una plataforma diseñada para transformar la forma en que los adultos mayores realizan trámites relacionados con AFP y servicios financieros.
-Nuestro objetivo no es que el usuario “aprenda a usar una aplicación”, sino que simplemente **converse con un sistema humano, empático y seguro**, eliminando la fricción digital.
+```bash
+npm run dev
+# or
+yarn dev
+# or
+pnpm dev
+# or
+bun dev
+```
 
-**VozMayor nace como una misión social y tecnológica:** devolverles independencia, dignidad y tranquilidad.
+Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
----
+You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
 
-# 🌎 Problema Real
+This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
 
-Miles de adultos mayores enfrentan:
+## Learn More
 
-* Filas interminables y agotadoras.
-* Trámites complejos y confusos.
-* Dependencia de terceros para realizar procesos básicos.
-* Miedo a equivocarse usando tecnología.
-* Riesgo de estafas y suplantación de identidad.
-* Asesores sin tiempo o paciencia para explicar adecuadamente.
-* Dificultades visuales, motrices o alfabetización digital.
-* Pierden horas en agencias para completar trámites.
+To learn more about Next.js, take a look at the following resources:
 
-La digitalización actual muchas veces excluye precisamente a quienes más necesitan ayuda.
+- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
+- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
 
----
+You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
 
-# 💡 Nuestra Solución
+## Deploy on Vercel
 
-VozMayor convierte procesos complejos en una conversación sencilla. El adulto mayor solo necesita hablar.
+The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
-La plataforma:
-
-* Verifica identidad.
-* Ejecuta trámites seguros.
-* Acompaña emocionalmente durante todo el proceso.
-* Escucha y comprende al usuario.
-* Explica documentos en lenguaje sencillo.
-
-Todo desde la comodidad de su hogar.
-
----
-
-# 🧠 Características del MVP
-* 🎙️ Reconocimiento de voz adaptativo.
-* 📄 Lectura y explicación automática de documentos.
-* ✍️ Formularios completados por voz.
-* ❤️ Detección de frustración o confusión.
-* ⛓️ Seguridad y trazabilidad.
-* 🟢 Interfaz visual simple y accesible.
----
-
-# 🛠️ Tecnologías
-
-* ⚡ Next.js
-* 🎨 Figma
-* 🗣️ ElevenLabs
-* ⛓️ Blockchain
-* 📌 Solana
-* 🤖 Inteligencia Artificial
-* 🎙️ Speech-to-Text / Text-to-Speech
-
---- 
-
-# ❤️ Nuestra Motivación
-
-Este proyecto nace porque pocas personas piensan realmente en los adultos mayores y en las dificultades que enfrentan diariamente para realizar trámites básicos.
-
-No deberían:
-
-* Depender de terceros.
-* Soportar filas interminables
-* Sentirse confundidos.
-* Ni tener miedo de perder su dinero.
-
-La tecnología debe incluir, acompañar y proteger.
-
-Con VozMayor queremos demostrar que la innovación también puede ser empática.
-
----
-
-# 👩‍💻 Equipo
-
-* Fatima Zelaya
-* Katheriny Aquino
-* Valeria Villacorta
-* Shiuu Valenzuela
-
----
-
-## ✨ “La mejor tecnología es aquella que hace sentir acompañadas a las personas.”
+Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
