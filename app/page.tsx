@@ -20,8 +20,10 @@ import {
 } from 'lucide-react';
 import Link from 'next/link';
 import { Logo } from '@/components/Logo';
+import {useRouter} from 'next/navigation';
 
-export default function LandingPage() {
+export default function LandingPage() { 
+  const router = useRouter();
   const scrollToSection = (id: string) => {
     const element = document.getElementById(id);
     if (element) {
@@ -79,7 +81,7 @@ export default function LandingPage() {
                 PensiónSegura convierte trámites previsionales complejos en conversaciones simples y seguras para adultos mayores.
               </p>
               <div className="-mt-4 flex flex-wrap gap-6">
-                <button className="bg-[#008BB7] text-white px-8 py-4 rounded-2xl font-bold flex items-center gap-2 shadow-lg shadow-cyan-200 hover:scale-105 transition-transform">
+                <button onClick={() => router.push("/dashboard-contigo")} className="bg-[#008BB7] text-white px-8 py-4 rounded-2xl font-bold flex items-center gap-2 shadow-lg shadow-cyan-200 hover:scale-105 transition-transform">
                   <Mic className="w-5 h-5" /> Hablar ahora
                 </button>
                 <button className="bg-white text-slate-700 px-8 py-4 rounded-2xl font-bold border border-slate-200 hover:bg-slate-50 transition-colors">
@@ -165,7 +167,7 @@ export default function LandingPage() {
           <div className="bg-[#008BB7] rounded-[3rem] p-16 text-center text-white shadow-2xl shadow-cyan-200/50">
             <h2 className="text-4xl md:text-5xl font-serif font-bold mb-6">Empieza a hablar con VozMayor</h2>
             <p className="text-cyan-50 text-xl mb-10 opacity-90">Sin descargas. Sin formularios largos. Solo tu voz.</p>
-            <button className="bg-white text-[#008BB7] px-10 py-4 rounded-2xl font-bold text-lg flex items-center gap-3 mx-auto hover:scale-105 transition-transform shadow-lg">
+            <button onClick={() => router.push("/dashboard-contigo")} className="bg-white text-[#008BB7] px-10 py-4 rounded-2xl font-bold text-lg flex items-center gap-3 mx-auto hover:scale-105 transition-transform shadow-lg">
               <Mic className="w-6 h-6" /> Hablar ahora
             </button>
           </div>
