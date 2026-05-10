@@ -76,7 +76,7 @@ export default function LandingPage() {
                 </span> tu AFP.
               </h1>
               <p className="-mt-4 text-xl text-slate-600 max-w-md leading-relaxed">
-                VozMayor convierte trámites previsionales complejos en conversaciones simples y seguras para adultos mayores.
+                PensiónSegura convierte trámites previsionales complejos en conversaciones simples y seguras para adultos mayores.
               </p>
               <div className="-mt-4 flex flex-wrap gap-6">
                 <button className="bg-[#008BB7] text-white px-8 py-4 rounded-2xl font-bold flex items-center gap-2 shadow-lg shadow-cyan-200 hover:scale-105 transition-transform">
