@@ -1,22 +1,16 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Inter } from "next/font/google";
 import '@solana/wallet-adapter-react-ui/styles.css';
-import "./globals.css";
+import "./globals.css"; 
 
-import { AppWalletProvider } from "./components/WalletProvider";
+// Importamos el proveedor de la billetera
+import {AppWalletProvider} from "./components/WalletProvider";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
+// Usamos la fuente estándar y segura
+const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "VozMayor | Dev3Hackathon", // Actualizado para que luzca profesional en la pestaña
+  title: "VozMayor | Dev3Hackathon", 
   description: "Trámites inmutables con inteligencia artificial y Solana",
 };
 
@@ -26,12 +20,9 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html
-      lang="es" // Cambiado a español
-      className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
-    >
-      <body className="min-h-full flex flex-col">
-        {/* 2. Envolvemos toda la app con el contexto de Phantom */}
+    <html lang="es" className="h-full antialiased">
+      <body className={`${inter.className} min-h-full flex flex-col`}>
+        {/* Envolvemos toda la app con el contexto de Phantom */}
         <AppWalletProvider>
             {children}
         </AppWalletProvider>

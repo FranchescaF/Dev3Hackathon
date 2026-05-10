@@ -1,4 +1,4 @@
-// app/dashboard/layout.tsx
+// app/dashboard-contigo/layout.tsx
 "use client";
 
 import React from "react";
@@ -8,7 +8,8 @@ import {
   Home, Mic, ScanLine, BookHeart, History, ShieldCheck, 
   Settings, Accessibility, Volume2, User, LucideIcon 
 } from "lucide-react";
-import { Logo } from "@/components/Logo";
+import { Logo } from "../components/Logo";
+import { WalletMultiButton } from '@solana/wallet-adapter-react-ui';
 
 interface NavItem {
   to: string;
@@ -18,13 +19,13 @@ interface NavItem {
 }
 
 const navItems: NavItem[] = [
-  { to: "/dashboard", label: "Inicio", icon: Home, exact: true },
-  { to: "/dashboard/miafp", label: "Mi AFP", icon: Mic },
-  { to: "/dashboard/subir", label: "Subir Documento", icon: ScanLine },
-  { to: "/dashboard/guardaditos", label: "Guardaditos", icon: BookHeart },
-  { to: "/dashboard/historial", label: "Historial", icon: History },
-  { to: "/dashboard/seguridad", label: "Mi Seguridad", icon: ShieldCheck },
-  { to: "/dashboard/accesibilidad", label: "Accesibilidad", icon: Accessibility },
+  { to: "/dashboard-contigo", label: "Inicio", icon: Home, exact: true },
+  { to: "/dashboard-contigo/miafp", label: "Mi AFP", icon: Mic },
+  { to: "/dashboard-contigo/subir", label: "Subir Documento", icon: ScanLine },
+  { to: "/dashboard-contigo/guardaditos", label: "Guardaditos", icon: BookHeart },
+  { to: "/dashboard-contigo/historial", label: "Historial", icon: History },
+  { to: "/dashboard-contigo/seguridad", label: "Mi Seguridad", icon: ShieldCheck },
+  { to: "/dashboard-contigo/accesibilidad", label: "Accesibilidad", icon: Accessibility },
 ];
 
 export default function DashboardLayout({ children }: { children: React.ReactNode }) {
@@ -61,6 +62,7 @@ export default function DashboardLayout({ children }: { children: React.ReactNod
         <header className="bg-white border-b border-slate-100 h-20 px-8 flex items-center justify-between sticky top-0 z-20">
           <div className="text-slate-400 text-md font-bold">Bienvenido de nuevo a PensiónSegura</div>
           <div className="flex items-center gap-6">
+            <WalletMultiButton style={{ backgroundColor: '#0088CC', borderRadius: '20px' }} />
             <button className="text-slate-600 hover:text-primary"><Volume2 className="w-5 h-5" /></button>
             <button className="text-slate-600 hover:text-primary"><Accessibility className="w-5 h-5" /></button>
             <button className="text-slate-600 hover:text-primary"><Settings className="w-5 h-5" /></button>
