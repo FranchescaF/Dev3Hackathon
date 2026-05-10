@@ -18,6 +18,8 @@ import {
   Zap,
   HeartHandshake
 } from 'lucide-react';
+import Link from 'next/link';
+import { Logo } from '@/components/Logo';
 
 export default function LandingPage() {
   const scrollToSection = (id: string) => {
@@ -38,16 +40,9 @@ export default function LandingPage() {
 
   return (
     <div className="min-h-screen bg-white text-slate-800 font-sans selection:bg-cyan-100">
-            <nav className="fixed top-0 left-0 right-0 z-[100] bg-white/80 backdrop-blur-md border-b border-cyan-100/50 shadow-sm">
+      <nav className="fixed top-0 left-0 right-0 z-[100] bg-white/80 backdrop-blur-md border-b border-cyan-100/50 shadow-sm">
         <div className="flex items-center justify-between px-8 py-4 max-w-7xl mx-auto">
-          <div className="flex items-center gap-2 cursor-pointer" onClick={() => window.scrollTo({top: 0, behavior: 'smooth'})}>
-            <div className="bg-[#008BB7] p-2 rounded-xl shadow-inner">
-              <Mic className="text-white w-5 h-5" />
-            </div>
-            <span className="text-2xl font-bold tracking-tight text-[#005A78]">
-              Voz<span className="text-[#008BB7]">Mayor</span>
-            </span>
-          </div>
+          <Logo/>
           
           <div className="hidden md:flex items-center gap-8 text-slate-500 font-medium text-md">
             <button onClick={() => scrollToSection('problema')} className="hover:text-[#008BB7] transition-colors">El problema</button>
@@ -56,9 +51,11 @@ export default function LandingPage() {
             <button onClick={() => scrollToSection('testimonios')} className="hover:text-[#008BB7] transition-colors">Testimonios</button>
           </div>
 
-          <button className="bg-[#008BB7] text-white px-7 py-2.5 rounded-full font-bold hover:bg-[#00769B] hover:shadow-lg transition-all active:scale-95">
-            Entrar
-          </button>
+          <Link href="/dashboard">
+  <button className="bg-[#008BB7] text-white px-7 py-2.5 rounded-full font-bold hover:bg-[#00769B] hover:shadow-lg transition-all active:scale-95">
+    Entrar
+  </button>
+</Link>
         </div>
       </nav>
       <div className="pt-20">
